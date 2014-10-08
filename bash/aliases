@@ -11,5 +11,7 @@ alias rg='cd ~/projects/ryanglover.net'
 alias pxu='cd ~/projects/pixelunion'
 
 # OSX Aliases
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+alias hideDesktop='defaults write com.apple.finder CreateDesktop false && killall Finder'
+alias showDesktop='defaults write com.apple.finder CreateDesktop true && killall Finder'
