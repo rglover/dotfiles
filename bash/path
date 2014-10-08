@@ -1,0 +1,14 @@
+# Rely on OSX defaults, using the following pattern if additional paths
+# are required.
+
+# Example:
+# PATH=$PATH:$HOME/usr/bin
+# export PATH
+
+# RVM
+source ~/.profile
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+
+# NVM
+source ~/.nvm/nvm.sh

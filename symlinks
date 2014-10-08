@@ -1,0 +1,5 @@
+# .bash_profile
+cd ~ && ln -s /dotfiles/.bash_profile .bash_profile
+
+# .ssh/config
+cd ~/.ssh && ln -s ~/dotfiles/sshconfig config

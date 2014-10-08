@@ -1,0 +1,29 @@
+Host rglover_github
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/me@ryanglover.net
+
+Host rglover_bitbucket
+    User git
+    HostName bitbucket.org
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/me@ryanglover.net
+
+Host meteorchef
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
+
+Host pixelunion_github
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/ryan@pixelunion.net
+
+Host pixelunion_bitbucket
+    User git
+    HostName bitbucket.org
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/ryan@pixelunion.net

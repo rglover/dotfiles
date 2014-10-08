@@ -1,0 +1,15 @@
+#Git Aliases
+alias gs='git status'
+alias gc='git commit'
+alias gl='git log'
+alias ga='git add'
+
+#Project Aliases
+alias tmc='cd ~/projects/themeteorchef'
+alias clients='cd ~/projects/clients'
+alias rg='cd ~/projects/ryanglover.net'
+alias pxu='cd ~/projects/pixelunion'
+
+# OSX Aliases
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'

@@ -1,0 +1,8 @@
+# Colors
+source ~/dotfiles/bash/colors
+
+# Git Prompt
+source ~/dotfiles/bash/gitprompt
+
+# Define Prompt
+PS1="$CYAN\u $PURPLE@ $BLUE\w$DEFAULT\$(__git_ps1) $ "
