@@ -1,3 +1,6 @@
+# If getting an error saying another username is not allowed, make sure to
+# do `ssh-add ~/.ssh/key-file-name`.
+
 Host rglover_github
     User git
     HostName github.com
