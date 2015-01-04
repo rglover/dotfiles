@@ -19,6 +19,18 @@ Host meteorchef
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
 
+Host morsel_github
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/ryan.glover@morsel.io
+
+Host morsel_bitbucket
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/ryan.glover@morsel.io
+
 Host pixelunion_github
     User git
     HostName github.com
