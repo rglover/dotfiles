@@ -7,8 +7,9 @@ alias gpo='git push origin '
 alias gpom='git push origin master'
 
 #Project Aliases
+alias morsel='cd ~/projects/morsel'
 alias tmc='cd ~/projects/themeteorchef'
-alias clients='cd ~/projects/clients'
+alias clients='cd ~/projects/morsel/clients'
 alias rg='cd ~/projects/ryanglover.net'
 alias pxu='cd ~/projects/pixelunion'
 
