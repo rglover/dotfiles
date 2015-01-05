@@ -3,6 +3,8 @@ alias gs='git status'
 alias gc='git commit'
 alias gl='git log'
 alias ga='git add'
+alias gpo='git push origin '
+alias gpom='git push origin master'
 
 #Project Aliases
 alias tmc='cd ~/projects/themeteorchef'
