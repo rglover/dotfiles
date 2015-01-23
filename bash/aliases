@@ -5,12 +5,15 @@ alias gl='git log'
 alias ga='git add'
 alias gpo='git push origin '
 alias gpom='git push origin master'
+alias gpuom='git pull origin master'
+alias gp='git push '
 
 #Project Aliases
 alias morsel='cd ~/projects/morsel'
 alias tmc='cd ~/projects/themeteorchef'
 alias clients='cd ~/projects/morsel/clients'
 alias rg='cd ~/projects/ryanglover.net'
+alias lip='cd ~/projects/lip'
 alias pxu='cd ~/projects/pixelunion'
 
 # OSX Aliases
