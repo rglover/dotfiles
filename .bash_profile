@@ -6,3 +6,6 @@ source ~/dotfiles/bash/aliases
 
 # Import Prompt
 source ~/dotfiles/bash/prompt
+
+# RBENV
+source ~/dotfiles/bash/rbenv
