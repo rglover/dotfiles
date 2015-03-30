@@ -5,8 +5,8 @@
 # PATH=$PATH:$HOME/usr/bin
 # export PATH
 
-# RVM
-source ~/.profile
-
 # NVM
 source ~/.nvm/nvm.sh
+
+# Add /themeteorchef to PATH to access scripts
+export PATH="$PATH:$HOME/projects/themeteorchef"
