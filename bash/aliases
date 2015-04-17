@@ -8,13 +8,19 @@ alias gpom='git push origin master'
 alias gpuom='git pull origin master'
 alias gp='git push '
 
-#Project Aliases
+# Morsel Aliases
 alias morsel='cd ~/projects/morsel'
-alias tmc='cd ~/projects/themeteorchef'
 alias clients='cd ~/projects/morsel/clients'
+alias em='cd ~/projects/morsel/clients/evented-mind/site'
+alias pxu='cd ~/projects/pixelunion'
+
+# The Meteor Chef Aliases
+alias tmc='cd ~/projects/themeteorchef'
+
+# Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
 alias lip='cd ~/projects/lip'
-alias pxu='cd ~/projects/pixelunion'
+
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
