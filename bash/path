@@ -10,3 +10,6 @@ source ~/.nvm/nvm.sh
 
 # Add /themeteorchef to PATH to access scripts
 export PATH="$PATH:$HOME/projects/themeteorchef"
+
+# Add /themeteorchef/packages to PACKAGE_DIRS for local package development.
+export PACKAGE_DIRS="$HOME/projects/themeteorchef/packages"
