@@ -1,0 +1,104 @@
+# Format
+# Shell script to run after formatting a machine or getting a new one.
+
+# Define some colors for funzies.
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+reset=`tput sgr0`
+echo "${yellow}★★★ ${green}Whee, computers! Let's install some software, hombre. ${yellow}★★★${reset}"
+sleep 2
+
+# Prompt for SUDO before starting the waterfall :)
+sudo -l
+
+# Set some defaults for OSX
+source osx
+echo -e "${green}✓ Blammo! OSX Defauls set.${reset}"
+sleep 2
+
+# Get Homebrew and Node/NPM installed
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install node
+brew install nvm
+
+echo -e "${green}✓ Blammo! Homebrew, Node, and NVM installed.${reset}"
+sleep 2
+
+# Setup rbenv (just cloning the repo here, PATH is alread setup in /bash/rbenv)
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
+echo -e "${green}✓ Blammo! rbenv installed.${reset}"
+sleep 2
+
+# Install Cask to automate application installs
+brew install caskroom/cask/brew-cask
+echo -e "${green}✓ Blammo! Cask installed.${reset}"
+sleep 2
+
+# Install applications via Cask
+brew cask install google-chrome
+brew cask install dropbox
+brew cask install sketch
+brew cask install sketch-toolbox
+brew cask install atom
+brew cask install arq
+brew cask install cloud
+brew cask install fantastical
+brew cask install color-oracle
+brew cask install iterm2
+brew cask install instacast
+brew cask install imageoptim
+brew cask install livereload
+brew cask install mailbox
+brew cask install 1password
+brew cask install paparazzi
+brew cask install licecap
+brew cask install skype
+brew cask install spacemonkey
+brew cask install soulver
+brew cask install textexpander
+brew cask install transmission
+brew cask install transmit
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vlc
+brew cask install xscope
+
+echo -e "${green}✓ Blammo! OSX applications installed.${reset}"
+sleep 2
+
+# Source symlinks *after* installing dependencies that may error out.
+source symlinks
+
+echo -e "${green}✓ Blammo! Symlinks copied.${reset}"
+sleep 2
+
+# Install Meteor
+curl https://install.meteor.com/ | sh
+
+echo -e "${green}✓ Blammo! Meteor installed.${reset}"
+sleep 2
+
+# Install NPM packages using the latest NVM version.
+nvm use 0.12
+npm install -g modulus
+npm install -g grunt-cli
+npm install -g gulp
+npm install -g meteorite
+
+echo -e "${green}✓ Blammo! NVM version set and NPM packages installed.${reset}"
+sleep 2
+
+# Install RubyGems
+sudo gem install siteleaf
+gem install sass
+gem install compass
+
+echo -e "${green}✓ Blammo! Gems installed.${reset}"
+sleep 2
+
+# Reminders
+
+echo -e "${red}☞ Make sure to go into the App Store and install missing apps.${reset}"
