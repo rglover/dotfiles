@@ -38,6 +38,7 @@ echo -e "${green}✓ Blammo! Cask installed.${reset}"
 sleep 2
 
 # Install applications via Cask
+brew cask install alfred
 brew cask install google-chrome
 brew cask install dropbox
 brew cask install sketch
