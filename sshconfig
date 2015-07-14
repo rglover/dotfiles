@@ -27,7 +27,7 @@ Host morsel_github
 
 Host morsel_bitbucket
     User git
-    HostName github.com
+    HostName bitbucket.org
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/ryan.glover@morsel.io
 
