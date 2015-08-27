@@ -12,7 +12,8 @@ alias gp='git push '
 alias morsel='cd ~/projects/morsel'
 alias clients='cd ~/projects/morsel/clients'
 alias em='cd ~/projects/morsel/clients/evented-mind/site'
-alias pxu='cd ~/projects/pixelunion'
+alias ca='cd ~/projects/morsel/clients/commit-action/app'
+alias ec='cd ~/projects/morsel/clients/exception-capital/site/wp-content/themes/exception'
 
 # The Meteor Chef Aliases
 alias tmc='cd ~/projects/themeteorchef'
@@ -20,7 +21,6 @@ alias tmc='cd ~/projects/themeteorchef'
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
 alias lip='cd ~/projects/lip'
-
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
