@@ -13,7 +13,7 @@ alias morsel='cd ~/projects/morsel'
 alias clients='cd ~/projects/morsel/clients'
 alias em='cd ~/projects/morsel/clients/evented-mind/site'
 alias ca='cd ~/projects/morsel/clients/commit-action/app'
-alias ec='cd ~/projects/morsel/clients/exception-capital/site/wp-content/themes/exception'
+alias wtf='cd ~/projects/morsel/clients/what-tax-form/app'
 
 # The Meteor Chef Aliases
 alias tmc='cd ~/projects/themeteorchef'
