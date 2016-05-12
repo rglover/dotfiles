@@ -11,16 +11,18 @@ alias gp='git push '
 # Morsel Aliases
 alias morsel='cd ~/projects/morsel'
 alias clients='cd ~/projects/morsel/clients'
-alias em='cd ~/projects/morsel/clients/evented-mind/site'
-alias ca='cd ~/projects/morsel/clients/commit-action/app'
-alias wtf='cd ~/projects/morsel/clients/what-tax-form/app'
 
 # The Meteor Chef Aliases
 alias tmc='cd ~/projects/themeteorchef'
+alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
+alias mws='meteor --settings settings-development.json'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
 alias lip='cd ~/projects/lip'
+
+# Misc. Aliases
+alias dp='cd ~/projects/doopoll'
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'

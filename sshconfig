@@ -7,6 +7,12 @@ Host rglover_gh
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/me@ryanglover.net
 
+Host doopoll
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/me@ryanglover.net
+
 Host rglover_bb
     User git
     HostName bitbucket.org
@@ -18,6 +24,12 @@ Host meteorchef
     HostName github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
+
+Host meteorchef_bb
+    User git
+    HostName bitbucket.org
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/business@themeteorchef.com
 
 Host morsel_gh
     User git
