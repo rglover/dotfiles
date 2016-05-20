@@ -22,7 +22,7 @@ alias rg='cd ~/projects/ryanglover.net'
 alias lip='cd ~/projects/lip'
 
 # Misc. Aliases
-alias dp='cd ~/projects/doopoll'
+alias dp='cd ~/projects/doopoll/app'
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
