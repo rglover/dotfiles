@@ -16,6 +16,7 @@ alias clients='cd ~/projects/morsel/clients'
 alias tmc='cd ~/projects/themeteorchef'
 alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
 alias mws='meteor --settings settings-development.json'
+alias mns='meteor npm start'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
