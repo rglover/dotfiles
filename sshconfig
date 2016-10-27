@@ -2,10 +2,10 @@
 # do `ssh-add ~/.ssh/key-file-name`.
 
 Host rglover_gh
-    User git
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/me@ryanglover.net
+User git
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/me@ryanglover.net
 
 Host doopoll
     User git
@@ -20,10 +20,10 @@ Host rglover_bb
     IdentityFile ~/.ssh/me@ryanglover.net
 
 Host meteorchef
-    User git
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
+  User git
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
 
 Host meteorchef_bb
     User git
@@ -42,3 +42,9 @@ Host morsel_bb
     HostName bitbucket.org
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/ryan.glover@morsel.io
+
+Host bluffington
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/doug.funnie@bluffington.edu

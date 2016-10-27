@@ -9,3 +9,5 @@ source ~/dotfiles/bash/prompt
 
 # RBENV
 source ~/dotfiles/bash/rbenv
+
+export PATH="$HOME/.yarn/bin:$PATH"

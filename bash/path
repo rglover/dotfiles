@@ -14,4 +14,4 @@ export PATH="$PATH:$HOME/projects/themeteorchef/chef"
 export PATH="$PATH:$HOME/projects/themeteorchef/linen-cli"
 
 # Add /themeteorchef/packages to PACKAGE_DIRS for local package development.
-export PACKAGE_DIRS="$HOME/projects/themeteorchef/packages"
+export METEOR_PACKAGE_DIRS="$HOME/projects/themeteorchef/packages"

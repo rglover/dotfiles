@@ -7,6 +7,8 @@ alias gpo='git push origin '
 alias gpom='git push origin master'
 alias gpuom='git pull origin master'
 alias gp='git push '
+alias gprom='git pull --rebase origin master'
+alias gprod='git pull --rebase origin development'
 
 # Morsel Aliases
 alias morsel='cd ~/projects/morsel'
@@ -17,6 +19,7 @@ alias tmc='cd ~/projects/themeteorchef'
 alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
 alias mws='meteor --settings settings-development.json'
 alias mns='meteor npm start'
+alias mr='meteor reset'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
