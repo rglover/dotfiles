@@ -48,3 +48,9 @@ Host bluffington
     HostName github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/doug.funnie@bluffington.edu
+
+Host cleverbeagle
+  User git
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ryan.glover@cleverbeagle.com

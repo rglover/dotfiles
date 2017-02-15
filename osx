@@ -2,7 +2,7 @@
 defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder
 
 # Change default screenshot location to /osx-screenshots
-defaults write com.apple.screencapture location ~/osx-screenshots && killall SystemUIServer
+defaults write com.apple.screencapture location ~/Downloads && killall SystemUIServer
 
 # Hide the desktop by default
 defaults write com.apple.finder CreateDesktop false && killall Finder

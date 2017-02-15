@@ -10,23 +10,45 @@ alias gp='git push '
 alias gprom='git pull --rebase origin master'
 alias gprod='git pull --rebase origin development'
 
+# Clever Beagle Aliases
+alias cb='cd ~/projects/cleverbeagle'
+alias bark='cd ~/projects/cleverbeagle/bark'
+alias sen='cd ~/projects/seneca/app'
+
 # Morsel Aliases
 alias morsel='cd ~/projects/morsel'
 alias clients='cd ~/projects/morsel/clients'
 
 # The Meteor Chef Aliases
 alias tmc='cd ~/projects/themeteorchef'
+alias site='cd ~/projects/themeteorchef/themeteorchef.com'
+alias base='cd ~/projects/themeteorchef/base/app'
+alias tuts='cd ~/projects/themeteorchef/tutorials'
+alias kit='cd ~/projects/themeteorchef/kitchen/app'
 alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
 alias mws='meteor --settings settings-development.json'
 alias mns='meteor npm start'
 alias mr='meteor reset'
+alias ngrk='cd ~ && ./ngrok http 3000'
+alias ng='cd ~ && ./ngrok http'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
 alias lip='cd ~/projects/lip'
 
 # Misc. Aliases
+alias proj='cd ~/projects'
+alias py='cd ~/projects/python'
 alias dp='cd ~/projects/doopoll/app'
+
+# Python/Django Aliases
+alias 2='python'
+alias 3='python3'
+alias vi='source bin/activate'
+alias pysh='python manage.py shell'
+alias pym='python manage.py migrate'
+alias mm='python manage.py makemigrations'
+alias migsql='python manage.py sqlmigrate'
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
