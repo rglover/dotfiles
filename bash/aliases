@@ -1,6 +1,7 @@
 #Git Aliases
 alias gs='git status'
 alias gc='git commit'
+alias gd='git describe'
 alias gl='git log'
 alias ga='git add'
 alias gpo='git push origin '
@@ -9,9 +10,12 @@ alias gpuom='git pull origin master'
 alias gp='git push '
 alias gprom='git pull --rebase origin master'
 alias gprod='git pull --rebase origin development'
+alias grc='git rm --cached'
+alias gdel='bfg --delete-files'
 
 # Clever Beagle Aliases
 alias cb='cd ~/projects/cleverbeagle'
+alias cbwa='cd ~/projects/cleverbeagle/webapp'
 alias bark='cd ~/projects/cleverbeagle/bark'
 alias sen='cd ~/projects/seneca/app'
 
@@ -40,6 +44,7 @@ alias lip='cd ~/projects/lip'
 alias proj='cd ~/projects'
 alias py='cd ~/projects/python'
 alias dp='cd ~/projects/doopoll/app'
+alias df='cd ~/Dotfiles && atom .'
 
 # Python/Django Aliases
 alias 2='python'
