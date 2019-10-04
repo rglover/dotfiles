@@ -10,8 +10,23 @@ source ~/.nvm/nvm.sh
 
 # Add /themeteorchef to PATH to access scripts
 export PATH="$PATH:$HOME/projects/themeteorchef/"
-export PATH="$PATH:$HOME/projects/themeteorchef/chef"
-export PATH="$PATH:$HOME/projects/themeteorchef/linen-cli"
 
 # Add /themeteorchef/packages to PACKAGE_DIRS for local package development.
-export METEOR_PACKAGE_DIRS="$HOME/projects/themeteorchef/packages"
+export METEOR_PACKAGE_DIRS=$HOME/projects/themeteorchef/packages:$HOME/projects/cleverbeagle/packages
+
+# Add MongoDB bin to PATH
+export PATH="$PATH:$HOME./usr/bin/mongo"
+
+# Add Golang to PATH
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/projects/cleverbeagle/go"
+export PATH="$HOME/projects/cleverbeagle/go/bin:$PATH"
+
+# Add ESLint to PATH
+export PATH="$HOME/.nvm/versions/node/v7.6.0/bin/eslint:$PATH"
+
+# Add MJML to PATH
+export PATH="$PATH:$HOME/node_modules/.bin"
+
+# Add Deno to PATH
+export PATH="$PATH:$HOME/.deno/bin"

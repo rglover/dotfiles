@@ -2,55 +2,57 @@
 # do `ssh-add ~/.ssh/key-file-name`.
 
 Host rglover_gh
-User git
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/me@ryanglover.net
-
-Host doopoll
     User git
     HostName github.com
+    UseKeychain yes
+    AddKeysToAgent yes
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/me@ryanglover.net
 
 Host rglover_bb
     User git
     HostName bitbucket.org
+    UseKeychain yes
+    AddKeysToAgent yes
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/me@ryanglover.net
 
 Host meteorchef
   User git
   HostName github.com
+  UseKeychain yes
+  AddKeysToAgent yes
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/ryan.glover@themeteorchef.com
 
 Host meteorchef_bb
     User git
     HostName bitbucket.org
+    UseKeychain yes
+    AddKeysToAgent yes
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/business@themeteorchef.com
-
-Host morsel_gh
-    User git
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/ryan.glover@morsel.io
-
-Host morsel_bb
-    User git
-    HostName bitbucket.org
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/ryan.glover@morsel.io
-
-Host bluffington
-    User git
-    HostName github.com
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/doug.funnie@bluffington.edu
 
 Host cleverbeagle
   User git
   HostName github.com
+  UseKeychain yes
+  AddKeysToAgent yes
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/ryan.glover@cleverbeagle.com
+
+Host cbbucket
+  User git
+  HostName bitbucket.org
+  UseKeychain yes
+  AddKeysToAgent yes
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ryan.glover@cleverbeagle.com
+
+Host zippq
+  User git
+  HostName github.com
+  UseKeychain yes
+  AddKeysToAgent yes
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/business+zippq@cleverbeagle.com

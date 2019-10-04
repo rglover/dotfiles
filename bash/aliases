@@ -2,7 +2,8 @@
 alias gs='git status'
 alias gc='git commit'
 alias gd='git describe'
-alias gl='git log'
+alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gb='git branch'
 alias ga='git add'
 alias gpo='git push origin '
 alias gpom='git push origin master'
@@ -16,8 +17,20 @@ alias gdel='bfg --delete-files'
 # Clever Beagle Aliases
 alias cb='cd ~/projects/cleverbeagle'
 alias cbwa='cd ~/projects/cleverbeagle/webapp'
-alias bark='cd ~/projects/cleverbeagle/bark'
-alias sen='cd ~/projects/seneca/app'
+alias cbs='cd ~/projects/cleverbeagle/site'
+alias cmd='cd ~/projects/cleverbeagle/command'
+alias pup='cd ~/projects/cleverbeagle/pup'
+alias fur='cd ~/projects/cleverbeagle/fur'
+alias cbp='cd ~/projects/cleverbeagle/packages'
+alias mwds='meteor --settings settings-demo.json'
+alias clonepup='git clone git@cleverbeagle:cleverbeagle/pup.git --origin upstream'
+alias cust='cd ~/projects/cleverbeagle/customers && cd'
+alias ups='up && up url'
+alias upd='up deploy production'
+alias upl='up logs -f'
+
+# Johnny Utah
+alias kup='kubectl proxy --port=8001 --api-prefix=/'
 
 # Morsel Aliases
 alias morsel='cd ~/projects/morsel'
@@ -27,13 +40,13 @@ alias clients='cd ~/projects/morsel/clients'
 alias tmc='cd ~/projects/themeteorchef'
 alias site='cd ~/projects/themeteorchef/themeteorchef.com'
 alias base='cd ~/projects/themeteorchef/base/app'
-alias tuts='cd ~/projects/themeteorchef/tutorials'
+alias tuts='cd ~/projects/themeteorchef/tutorials || cd /Volumes/projects/themeteorchef/themeteorchef.com || echo "Well dang, kid. Need to mount your NAS."'
 alias kit='cd ~/projects/themeteorchef/kitchen/app'
 alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
 alias mws='meteor --settings settings-development.json'
 alias mns='meteor npm start'
 alias mr='meteor reset'
-alias ngrk='cd ~ && ./ngrok http 3000'
+alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost'
 alias ng='cd ~ && ./ngrok http'
 
 # Personal Project Aliases
@@ -44,7 +57,10 @@ alias lip='cd ~/projects/lip'
 alias proj='cd ~/projects'
 alias py='cd ~/projects/python'
 alias dp='cd ~/projects/doopoll/app'
-alias df='cd ~/Dotfiles && atom .'
+alias df='cd ~/Dotfiles && code .'
+alias ydla='youtube-dl -f 140'
+alias cc='cd ~/projects/cleverbeagle/culture-clash'
+alias subl='open -a "sublime text"'
 
 # Python/Django Aliases
 alias 2='python'
@@ -54,6 +70,10 @@ alias pysh='python manage.py shell'
 alias pym='python manage.py migrate'
 alias mm='python manage.py makemigrations'
 alias migsql='python manage.py sqlmigrate'
+
+# Go Aliases
+alias gow='cd ~/projects/cleverbeagle/go'
+alias gg='go get'
 
 # OSX Aliases
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'

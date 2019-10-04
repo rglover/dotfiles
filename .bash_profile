@@ -7,12 +7,7 @@ source ~/dotfiles/bash/aliases
 # Import Prompt
 source ~/dotfiles/bash/prompt
 
-# RBENV
-source ~/dotfiles/bash/rbenv
-
 export PATH="$HOME/.yarn/bin:$PATH"
-
-ulimit -n 65536 65536
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
@@ -29,3 +24,11 @@ test -r /sw/bin/init.sh && . /sw/bin/init.sh
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# RBENV
+eval "$(rbenv init -)"
+export PATH="/Users/rglover/.rbenv/shims:$PATH"
+export PATH="./bin:~/elements/bin:$PATH";
