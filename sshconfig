@@ -49,10 +49,10 @@ Host cbbucket
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/ryan.glover@cleverbeagle.com
 
-Host zippq
+Host command
   User git
   HostName github.com
   UseKeychain yes
   AddKeysToAgent yes
   PreferredAuthentications publickey
-  IdentityFile ~/.ssh/business+zippq@cleverbeagle.com
+  IdentityFile ~/.ssh/dev@oncommand.io

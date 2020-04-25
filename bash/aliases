@@ -47,6 +47,8 @@ alias mws='meteor --settings settings-development.json'
 alias mns='meteor npm start'
 alias mr='meteor reset'
 alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost'
+alias cmdjobsngrk='cd ~ && ./ngrok http 4000 -region=us -hostname=cmd-jobs.cleverbeagle.com -host-header=localhost'
+alias cmdappngrk='cd ~ && ./ngrok http 3000 -region=us -hostname=cmd-app.cleverbeagle.com -host-header=localhost'
 alias ng='cd ~ && ./ngrok http'
 
 # Personal Project Aliases
@@ -61,6 +63,9 @@ alias df='cd ~/Dotfiles && code .'
 alias ydla='youtube-dl -f 140'
 alias cc='cd ~/projects/cleverbeagle/culture-clash'
 alias subl='open -a "sublime text"'
+
+# Elements Aliases
+alias els='elements start'
 
 # Python/Django Aliases
 alias 2='python'
