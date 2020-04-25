@@ -1,0 +1,178 @@
+{
+  "#": "Generated with Atomizr - https://github.com/idleberg/sublime-atomizr",
+  "completions": [
+    {
+      "contents": "import { Roles } from 'meteor/alanning:roles';",
+      "trigger": "imp_rol\tImport Roles"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';\nimport { check, Match } from 'meteor/check';\nimport Collection from '../Collection';\n\nMeteor.publish('context.topic', function contextTopic() {\n  check();\n  return Collection.find();\n});",
+      "trigger": "mpub\tMeteor Publication"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';\nimport { $ } from 'meteor/jquery';\nimport { Bert } from 'meteor/themeteorchef:bert';\nimport './validation.js';\n\nlet component;\n\nconst getData = () => {\n  return {\n    field: document.querySelector('[name=\"field\"]').value,\n  };\n};\n\nconst handleSubmit = () => {\n  const data = getData();\n\n  Meteor.call('', data, (error) => {\n    if (error) {\n      Bert.alert(error.reason, 'danger');\n    } else {\n      Bert.alert('Success message', 'success');\n    }\n  });\n};\n\nconst validate = () => {\n  $(component.formRef).validate({\n    rules: {\n      field: {\n        required: true,\n      },\n    },\n    messages: {\n      field: {\n        required: '',\n      },\n    },\n    submitHandler() { handleSubmit(); },\n  });\n};\n\nexport default (options) => {\n  component = options.component;\n  validate();\n};\n",
+      "trigger": "jsfmod\tJavaScript Form Module"
+    },
+    {
+      "contents": "Template.name.onCreated( () => {\n  let template = Template.instance();\n});\n\nTemplate.name.onRendered( () => {\n\n});\n\nTemplate.name.helpers({\n  helper() {\n\n  }\n});\n\nTemplate.name.events({\n  'click' ( event, template ) {\n\n  }\n});",
+      "trigger": "mbjs\tMeteor Blaze JS"
+    },
+    {
+      "contents": "import _ from 'lodash';",
+      "trigger": "imp_ld\tImport Lodash"
+    },
+    {
+      "contents": "import { ... } from 'react-router-dom';",
+      "trigger": "imp_rrd\tImport React Router DOM"
+    },
+    {
+      "contents": "import { withTracker } from 'meteor/react-meteor-data';",
+      "trigger": "imp_cc\tImport Create Container"
+    },
+    {
+      "contents": "import { _ } from 'meteor/underscore';",
+      "trigger": "imp_und\tImport Underscore"
+    },
+    {
+      "contents": "/* eslint-disable consistent-return */\n\nconst methodName = () => {\n  try {\n\n  } catch (exception) {\n    throw new Error('500', `[moduleName.methodName] ${exception}`);\n  }\n};\n\nconst handler = (options) => {\n  try {\n    // Start writing here.\n  } catch (exception) {\n    throw new Error('500', `[moduleName.handler] ${exception}`);\n  }\n};\n\nexport const moduleName = options => handler(options);\n",
+      "trigger": "jsmod\tJavaScript Module"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';\nimport { check } from 'meteor/check';\n\nMeteor.methods({\n  'context.topic': function contextTopic(options) {\n    check(options, Object);\n  },\n});",
+      "trigger": "mmb\tMeteor Methods Block"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';",
+      "trigger": "imp_meteor\tImport Meteor"
+    },
+    {
+      "contents": "/* eslint-disable consistent-return */\n\nlet action;\n\nconst methodName = () => {\n  try {\n\n  } catch (exception) {\n    throw new Error(`[moduleName.methodName] ${exception.message}`);\n  }\n};\n\nconst moduleName = (options, promise) => {\n  try {\n    action = promise;\n    action.resolve();\n  } catch (exception) {\n    action.reject(`[moduleName.handler] ${exception}`);\n  }\n};\n\nexport default options =>\nnew Promise((resolve, reject) =>\nmoduleName(options, { resolve, reject }));\n",
+      "trigger": "promod\tPromise Module"
+    },
+    {
+      "contents": "import { withTracker } from 'meteor/react-meteor-data';",
+      "trigger": "imp_wt\tImport With Tracker"
+    },
+    {
+      "contents": "Meteor.call('', {}, (error, response) => {\n  if (error) {\n    Bert.alert(error.reason, 'danger');\n  } else {\n    Bert.alert('', 'success');\n  }\n});",
+      "trigger": "mmc\tMeteor Method Call"
+    },
+    {
+      "contents": "import Container from '../containers/Container.js';",
+      "trigger": "imp_cont\tImport Container"
+    },
+    {
+      "contents": "import { Bert } from 'meteor/themeteorchef:bert';",
+      "trigger": "imp_bert\tImport Bert"
+    },
+    {
+      "contents": "import { ReactiveVar } from 'meteor/reactive-var';",
+      "trigger": "imp_rv\tImport ReactiveVar"
+    },
+    {
+      "contents": "import { Accounts } from 'meteor/accounts-base';",
+      "trigger": "imp_accounts\tImport Accounts"
+    },
+    {
+      "contents": "import React from 'react';",
+      "trigger": "imp_react\tImport React"
+    },
+    {
+      "contents": "import { Component } from '../components/Component.js';",
+      "trigger": "imp_comp\tImport Component"
+    },
+    {
+      "contents": "import { Random } from 'meteor/random';",
+      "trigger": "imp_ran\tImport Random"
+    },
+    {
+      "contents": "import { ... } from 'react-bootstrap';",
+      "trigger": "imp_rb\tImport React Bootstrap"
+    },
+    {
+      "contents": "import PropTypes from 'prop-types';",
+      "trigger": "imp_pt\tImport PropTypes"
+    },
+    {
+      "contents": "import { check } from 'meteor/check';",
+      "trigger": "imp_check\tImport Check"
+    },
+    {
+      "contents": "FlowRouter.route( '/', {\n  name: 'name',\n  action( params ) {\n    BlazeLayout.render( '', { yield: '' } );\n    ReactLayout.render( App, { yield: <Component /> } );\n  }\n});",
+      "trigger": "frr\tFlowRouter Route"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';\nimport { createContainer } from 'meteor/react-meteor-data';\nimport { Component } from '../components/Component.js';\nimport { Collection } from '../../api/collection/collection.js';\n\nexport default createContainer((props) => {\n\n}, Component);",
+      "trigger": "cc\tCreate Container"
+    },
+    {
+      "contents": "import { Mongo } from 'meteor/mongo';\nimport SimpleSchema from 'simpl-schema';\n\nconst Collection = new Mongo.Collection('collection');\n\nCollection.allow({\n  insert: () => false,\n  update: () => false,\n  remove: () => false,\n});\n\nCollection.deny({\n  insert: () => true,\n  update: () => true,\n  remove: () => true,\n});\n\nconst CollectionSchema = new SimpleSchema({\n  owner: {\n    type: String,\n    label: 'The ID of the owner of this document.',\n  },\n});\n\nCollection.attachSchema(CollectionSchema);\n\nexport default Collection;",
+      "trigger": "mcol\tMongo Collection"
+    },
+    {
+      "contents": "const methodName = () => {\n  try {\n    // Do it to it, Lars.\n  } catch (exception) {\n    throw new Error(`[moduleName.methodName] ${exception.message}`);\n  }\n};\n",
+      "trigger": "modmethod\tPromise Module Method"
+    },
+    {
+      "contents": "/*\n  TODO:\n*/",
+      "trigger": "tdml\tTODO Comment Multiline"
+    },
+    {
+      "contents": "import { Meteor } from 'meteor/meteor';\nimport { composeWithTracker } from 'react-komposer';\nimport { collection } from '../../api/collection/collection.js';\nimport { Component } from '../components/.js';\nimport { Loading } from '../components/loading.js';\n\nconst composer = (props, onData) => {\n  const subscription = Meteor.subscribe('');\n\n  if (subscription.ready()) {\n    const data = collection.find().fetch();\n    onData(null, { data });\n  }\n};\n\nexport default composeWithTracker(composer, Loading)(Component);",
+      "trigger": "rkc\tKomposer Container"
+    },
+    {
+      "contents": "{ /* */ }",
+      "trigger": "rcom\tReact Comment"
+    },
+    {
+      "contents": "import React, { PropTypes } from 'react';\nimport { composeWithTracker } from 'react-komposer';\n\nclass Component extends React.Component {\n  constructor(props) {\n    super(props);\n    // this.thing = this.thing.bind(this);\n  }\n\n  render() {\n    return <h3>Component</h3>;\n  }\n}\n\nComponent.propTypes = {\n  // prop: PropTypes.string.isRequired,\n};\n\nconst composer = (props, onData) => {\n  /*\n    const subscription = Meteor.subscribe('sub');\n    if (subscription.ready()) {\n      const prop = Collection.findOne();\n      onData(null, { prop })\n    }\n  */\n};\n\nexport default composeWithTracker(composer)(Component);\n",
+      "trigger": "rkon\tReact Class Komposer Container"
+    },
+    {
+      "contents": "import React from 'react';\nimport PropTypes from 'prop-types';\nimport { createContainer } from 'meteor/react-meteor-data';\n\nclass Component extends React.Component {\n  constructor(props) {\n    super(props);\n    // this.thing = this.thing.bind(this);\n  }\n\n  render() {\n    return <h3>Component</h3>;\n  }\n}\n\nComponent.propTypes = {\n  // prop: PropTypes.string.isRequired,\n};\n\nexport default createContainer(() => {\n  /*\n    const subscription = Meteor.subscribe('sub');\n    return {\n      loading: !subscription.ready(),\n      prop: Collection.findOne(),\n    };\n  */\n}, Component);\n",
+      "trigger": "rcon\tReact Class Create Container"
+    },
+    {
+      "contents": "constructor(props) {\n  super(props);\n  this.state = {};\n  this.method = this.method.bind(this);\n}",
+      "trigger": "rcc\tReact Class Constructor"
+    },
+    {
+      "contents": "<script>\n  (function(d, s, id) {window.someConfigData = '<config string like userId>';\n    var js, fsjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;\n    js = d.createElement(s);js.id = id;js.src = '<URL>';\n    fsjs.parentNode.insertBefore(js, fsjs);\n  }(document, 'script', '<Id to give script tag>'));\n</script>",
+      "trigger": "dstrl\tDynamic Script Tag w/ Remote Load"
+    },
+    {
+      "contents": "/* TODO: */",
+      "trigger": "td\tTODO Comment"
+    },
+    {
+      "contents": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nconst Component = ({ prop1, prop2 }) => (\n  <div></div>\n);\n\nComponent.propTypes = {};\n\nexport default Component;",
+      "trigger": "rsf\tReact Stateless Functional Component"
+    },
+    {
+      "contents": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nclass Component extends React.Component {\n  constructor(props) {\n    super(props);\n    // this.state = {};\n    // this.thing = this.thing.bind(this);\n  }\n\n  render() {\n    return (<div className=\"Component\">\n      {/* Component markup here */}\n    </div>);\n  }\n}\n\nComponent.propTypes = {\n  // prop: PropTypes.string.isRequired,\n};\n\nexport default Component;",
+      "trigger": "rc\tReact Class"
+    },
+    {
+      "contents": "ref={element => (this.element = element)}",
+      "trigger": "rr\tReact Ref"
+    },
+    {
+      "contents": "export default withTracker(() => {\n  const subscription = Meteor.subscribe('subscription');\n  return {\n    loading: !subscription.ready(),\n    data:,\n  };\n})(Component);",
+      "trigger": "cont\twithTracker Container"
+    },
+    {
+      "contents": "items[Math.floor(Math.random() * items.length)]",
+      "trigger": "raa\tRandom Array Item"
+    },
+    {
+      "contents": "#### Tutorial: Using the Email Package\n\nIn this tutorial, we'll take a brief look at sending email with Meteor. We'll learn how to wire up a form on the client and then perform a send from the server-side using a Meteor Method.\n\n[Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/using-the-email-package)\n\n[Download the source (.zip)](https://github.com/themeteorchef/using-the-email-package/archive/master.zip)\n\n---\n\n**Need help with this?** [Sign up for a Mentorship appointment](https://themeteorchef.com/mentorship?readme=using-the-email-package) and get 1-on-1 help.\n\n---\n\n_The code for this tutorial is licensed under the [MIT License](http://opensource.org/licenses/MIT)_.",
+      "trigger": "tutrd\tTutorial README"
+    },
+    {
+      "contents": "smtp://postmaster%40demo.themeteorchef.com:1754b12d1754pl4n3@smtp.mailgun.org:587",
+      "trigger": "demomail\tDemo MAIL_URL"
+    }
+  ],
+  "scope": "source.json"
+}

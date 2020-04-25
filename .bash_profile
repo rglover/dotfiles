@@ -1,3 +1,4 @@
+source ~/.profile
 # Import $PATH
 source ~/dotfiles/bash/path
 
@@ -29,3 +30,4 @@ test -r /sw/bin/init.sh && . /sw/bin/init.sh
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export PATH="./bin:~/elements/bin:$PATH";
