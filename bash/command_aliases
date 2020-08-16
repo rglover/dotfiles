@@ -13,6 +13,10 @@ alias kubectl_command_staging='cd ~/projects/command/.deploy && kubectl --kubeco
 alias helm_command_staging='cd ~/projects/command/.deploy && helm --kubeconfig "command-staging/kubectl_config"'
 alias cs_logs_app='kubectl_command_staging logs -l app=app -f'
 
-alias kubectl_command_production='cd ~/projects/command/.deploy --kubeconfig="command-production/kubectl_config"'
+# -----------
+# Production
+# -----------
+
+alias kubectl_command_production='cd ~/projects/command/.deploy && kubectl --kubeconfig="command-production/kubectl_config"'
 alias helm_command_production='cd ~/projects/command/.deploy && helm --kubeconfig "command-production/kubectl_config"'
 alias cp_logs_jobs='kubectl_command_production logs -l app=jobs -f'
