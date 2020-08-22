@@ -33,3 +33,11 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(rbenv init -)"
 export PATH="/Users/rglover/.rbenv/shims:$PATH"
 export PATH="./bin:~/elements/bin:$PATH";
+
+complete -C /usr/local/bin/terraform terraform
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rglover/google-cloud-sdk/path.bash.inc' ]; then . '/Users/rglover/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rglover/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/rglover/google-cloud-sdk/completion.bash.inc'; fi

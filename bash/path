@@ -12,7 +12,7 @@ source ~/.nvm/nvm.sh
 export PATH="$PATH:$HOME/projects/themeteorchef/"
 
 # Add /themeteorchef/packages to PACKAGE_DIRS for local package development.
-export METEOR_PACKAGE_DIRS=$HOME/projects/themeteorchef/packages:$HOME/projects/cleverbeagle/packages
+export METEOR_PACKAGE_DIRS=$HOME/projects/themeteorchef/packages:$HOME/projects/cleverbeagle/packages:$HOME/projects/themeteorchef
 
 # Add MongoDB bin to PATH
 export PATH="$PATH:$HOME./usr/bin/mongo"
