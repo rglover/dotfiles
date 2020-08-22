@@ -1,4 +1,3 @@
-source ~/.profile
 # Import $PATH
 source ~/dotfiles/bash/path
 
