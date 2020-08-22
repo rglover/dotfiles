@@ -8,7 +8,7 @@ source ~/dotfiles/bash/aliases
 source ~/dotfiles/bash/prompt
 
 export PATH="$HOME/.yarn/bin:$PATH"
-q
+
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
