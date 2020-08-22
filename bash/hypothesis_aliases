@@ -1,94 +1,42 @@
-#Git Aliases
-alias gs='git status'
-alias gc='git commit'
-alias gd='git describe'
-alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias gb='git branch'
-alias ga='git add'
-alias gpo='git push origin '
-alias gpom='git push origin master'
-alias gpuom='git pull origin master'
-alias gp='git push '
-alias gprom='git pull --rebase origin master'
-alias gprod='git pull --rebase origin development'
-alias grc='git rm --cached'
-alias gdel='bfg --delete-files'
+# -----------
+# Development
+# -----------
 
-# Hypothesis Aliases
-alias hyp='cd ~/projects/hypothesis'
-alias hypjobs='cd ~/projects/hypothesis/jobs'
-alias hypsite='cd ~/projects/hypothesis/site'
-alias hypjobsngrk='cd ~ && ./ngrok http 4000 -region=us -hostname=hyp-jobs.cleverbeagle.com -host-header=localhost'
-alias hypappngrk='cd ~ && ./ngrok http 3000 -region=us -hostname=hyp-app.cleverbeagle.com -host-header=localhost'
+alias hypothesis_jobs_ngrok='cd ~ && ./ngrok http 4000 -region=us -hostname=cmd-jobs.cleverbeagle.com -host-header=localhost'
+alias hypothesis_app_ngrok='cd ~ && ./ngrok http 3000 -region=us -hostname=cmd-app.cleverbeagle.com -host-header=localhost'
 
-# Command Aliases (Deprecated)
-alias cmd='hyp'
-alias jobs='hypjobs'
-alias marketing='hypsite'
-alias cmdjobsngrk='hypjobsngrk'
-alias cmdappngrk='hypappngrk'
+# -----------
+# Staging
+# -----------
 
-# Youblicity Aliases
-alias yb='cd ~/projects/youblicity'
+# doctl
+alias hs_node_pool='get_hs_node_pool(){ doctl kubernetes cluster node-pool get hypothesis-staging "$1"; }; get_hs_node_pool' # Expects a pool name as an argument.
 
-# Clever Beagle Aliases
-alias cb='cd ~/projects/cleverbeagle'
-alias cbwa='cd ~/projects/cleverbeagle/webapp'
-alias cbs='cd ~/projects/cleverbeagle/site'
-alias pup='cd ~/projects/cleverbeagle/pup'
-alias fur='cd ~/projects/cleverbeagle/fur'
-alias cbp='cd ~/projects/cleverbeagle/packages'
-alias mwds='meteor --settings settings-demo.json'
-alias clonepup='git clone git@cleverbeagle:cleverbeagle/pup.git --origin upstream'
-alias cust='cd ~/projects/cleverbeagle/customers && cd'
-alias ups='up && up url'
-alias upd='up deploy production'
-alias upl='up logs -f'
+# kubectl
+alias kubectl_hypothesis_staging='cd ~/projects/hypothesis/.deploy && kubectl --kubeconfig="hypothesis-staging/kubectl_config"'
+alias hs_shell='open_hs_shell(){ kubectl_hypothesis_staging exec --stdin --tty "$1" -- /bin/sh; }; open_hs_shell' # Expects a pod ID as an argument.
 
-# The Meteor Chef Aliases
-alias tmc='cd ~/projects/themeteorchef'
-alias site='cd ~/projects/themeteorchef/themeteorchef.com'
-alias base='cd ~/projects/themeteorchef/base/app'
-alias tuts='cd ~/projects/themeteorchef/tutorials || cd /Volumes/projects/themeteorchef/themeteorchef.com || echo "Well dang, kid. Need to mount your NAS."'
-alias kit='cd ~/projects/themeteorchef/kitchen/app'
-alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
-alias mws='export NODE_OPTIONS="--max-http-header-size=80000" && meteor --settings settings-development.json'
-alias mns='meteor npm start'
-alias mr='meteor reset'
-alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost'
-alias ng='cd ~ && ./ngrok http'
+# helm
+alias helm_hypothesis_staging='cd ~/projects/hypothesis/.deploy && helm --kubeconfig "hypothesis-staging/kubectl_config"'
 
-source ~/Dotfiles/bash/hypothesis_aliases
+# logs
+alias hs_logs_app='open_hs_logs_app(){ kubectl_hypothesis_staging logs -l app=app -f; }; open_hs_logs_app'
+alias hs_logs_jobs='open_hs_logs_jobs(){ kubectl_hypothesis_staging logs -l app=jobs -f; }; open_hs_logs_jobs'
 
-# CheatCode
-alias cc='cd ~/projects/cheatcode'
+# -----------
+# Production
+# -----------
 
-# Youblicity
+# doctl
+alias hp_node_pool='get_hp_node_pool(){ doctl kubernetes cluster node-pool get hypothesis-production "$1"; }; get_hp_node_pool' # Expects a pool name as an argument.
 
-alias ybastaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@142.93.164.172'
-alias ybjstaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@164.90.219.90'
+# kubectl
+alias kubectl_hypothesis_production='cd ~/projects/hypothesis/.deploy && kubectl --kubeconfig="hypothesis-production/kubectl_config"'
+alias hp_shell='open_hp_shell(){ kubectl_hypothesis_production exec --stdin --tty "$1" -- /bin/sh; }; open_hp_shell' # Expects a pod ID as an argument.
 
-# Personal Project Aliases
-alias rg='cd ~/projects/ryanglover.net'
-alias lip='cd ~/projects/lip'
+# helm
+alias helm_hypothesis_production='cd ~/projects/hypothesis/.deploy && helm --kubeconfig "hypothesis-production/kubectl_config"'
 
-# Misc. Aliases
-alias proj='cd ~/projects'
-alias py='cd ~/projects/python'
-alias df='cd ~/dotfiles && code .'
-alias ydla='youtube-dl -f 140'
-
-# Python/Django Aliases
-alias 2='python'
-alias 3='python3'
-alias vi='source bin/activate'
-alias pysh='python manage.py shell'
-alias pym='python manage.py migrate'
-alias mm='python manage.py makemigrations'
-alias migsql='python manage.py sqlmigrate'
-
-# OSX Aliases
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-alias hideDesktop='defaults write com.apple.finder CreateDesktop false && killall Finder'
-alias showDesktop='defaults write com.apple.finder CreateDesktop true && killall Finder'
+# logs
+alias hp_logs_app='kubectl_hypothesis_production logs -l app=app -f'
+alias hp_logs_jobs='kubectl_hypothesis_production logs -l app=jobs -f'
