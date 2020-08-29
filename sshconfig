@@ -56,3 +56,11 @@ Host command
   AddKeysToAgent yes
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/dev@oncommand.io
+
+Host hypothesis
+  User git
+  HostName github.com
+  UseKeychain yes
+  AddKeysToAgent yes
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/dev@hypothesis.app

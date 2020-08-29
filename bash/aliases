@@ -18,15 +18,15 @@ alias gdel='bfg --delete-files'
 alias hyp='cd ~/projects/hypothesis'
 alias hypjobs='cd ~/projects/hypothesis/jobs'
 alias hypsite='cd ~/projects/hypothesis/site'
-alias hypjobsngrk='cd ~ && ./ngrok http 4000 -region=us -hostname=hyp-jobs.cleverbeagle.com -host-header=localhost'
-alias hypappngrk='cd ~ && ./ngrok http 3000 -region=us -hostname=hyp-app.cleverbeagle.com -host-header=localhost'
+alias hypngrkapp='cd ~ && ./ngrok http 3000 -region=us -hostname=ngrok-app.hypothesis.app -host-header=localhost -config=/Users/rglover/.ngrok2/hypothesis.yml'
+alias hypngrkjobs='cd ~ && ./ngrok http 4000 -region=us -hostname=ngrok-jobs.hypothesis.app -host-header=localhost -config=/Users/rglover/.ngrok2/hypothesis.yml'
 
 # Command Aliases (Deprecated)
 alias cmd='hyp'
 alias jobs='hypjobs'
 alias marketing='hypsite'
-alias cmdjobsngrk='hypjobsngrk'
-alias cmdappngrk='hypappngrk'
+alias cmdappngrk='hypngrkapp'
+alias cmdjobsngrk='hypngrkjobs'
 
 # Youblicity Aliases
 alias yb='cd ~/projects/youblicity'
@@ -55,7 +55,7 @@ alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
 alias mws='export NODE_OPTIONS="--max-http-header-size=80000" && meteor --settings settings-development.json'
 alias mns='meteor npm start'
 alias mr='meteor reset'
-alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost'
+alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost -config=/Users/rglover/.ngrok2/cleverbeagle.yml'
 alias ng='cd ~ && ./ngrok http'
 
 source ~/Dotfiles/bash/hypothesis_aliases
