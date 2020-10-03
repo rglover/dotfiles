@@ -64,3 +64,11 @@ Host hypothesis
   AddKeysToAgent yes
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/dev@hypothesis.app
+
+Host cheatcode
+  User git
+  HostName github.com
+  UseKeychain yes
+  AddKeysToAgent yes
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ryan.glover@cheatcode.co
