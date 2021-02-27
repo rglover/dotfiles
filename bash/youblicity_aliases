@@ -1,0 +1,2 @@
+# kubectl
+alias ybkbctl='cd ~/projects/youblicity/.deploy && kubectl --kubeconfig="kubectrl_config"'

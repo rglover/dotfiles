@@ -1,0 +1,10 @@
+# doctl
+alias cb_node_pool='get_cb_node_pool(){ doctl kubernetes cluster node-pool get cleverbeagle "$1"; }; get_cb_node_pool' # Expects a pool name as an argument.
+
+# kubectl
+alias kubectl_cleverbeagle='cd ~/projects/cleverbeagle/.deploy && kubectl --kubeconfig="kubectl_config"'
+alias cb_shell='open_cb_shell(){ kubectl_cleverbeagle exec --stdin --tty "$1" -- /bin/sh; }; open_cb_shell' # Expects a pod ID as an argument.
+
+# logs
+alias cb_logs_cleverbeagle='kubectl_cleverbeagle logs -l app=cleverbeagle -f'
+alias cb_logs_themeteorchef='kubectl_cleverbeagle logs -l app=themeteorchef -f'

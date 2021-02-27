@@ -30,6 +30,7 @@ alias cmdjobsngrk='hypngrkjobs'
 
 # Youblicity Aliases
 alias yb='cd ~/projects/youblicity'
+source ~/Dotfiles/bash/youblicity_aliases
 
 # Clever Beagle Aliases
 alias cb='cd ~/projects/cleverbeagle'
@@ -59,6 +60,7 @@ alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -
 alias ng='cd ~ && ./ngrok http'
 
 source ~/Dotfiles/bash/hypothesis_aliases
+source ~/Dotfiles/bash/cleverbeagle_aliases
 
 # CheatCode
 alias cc='cd ~/projects/cheatcode'
@@ -67,6 +69,7 @@ alias cc='cd ~/projects/cheatcode'
 
 alias ybastaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@142.93.164.172'
 alias ybjstaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@164.90.219.90'
+alias ybjproduction='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@165.232.72.115'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
