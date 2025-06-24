@@ -1,6 +1,14 @@
 # If getting an error saying another username is not allowed, make sure to
 # do `ssh-add ~/.ssh/key-file-name`.
 
+Host parrot
+    User git
+    HostName github.com
+    UseKeychain yes
+    AddKeysToAgent yes
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/business@codewithparrot.com
+
 Host rglover
     User git
     HostName github.com
@@ -48,22 +56,6 @@ Host cbbucket
   AddKeysToAgent yes
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/ryan.glover@cleverbeagle.com
-
-Host command
-  User git
-  HostName github.com
-  UseKeychain yes
-  AddKeysToAgent yes
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/dev@oncommand.io
-
-Host hypothesis
-  User git
-  HostName github.com
-  UseKeychain yes
-  AddKeysToAgent yes
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/dev@hypothesis.app
 
 Host cheatcode
   User git

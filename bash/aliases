@@ -14,62 +14,17 @@ alias gprod='git pull --rebase origin development'
 alias grc='git rm --cached'
 alias gdel='bfg --delete-files'
 
-# Hypothesis Aliases
-alias hyp='cd ~/projects/hypothesis'
-alias hypjobs='cd ~/projects/hypothesis/jobs'
-alias hypsite='cd ~/projects/hypothesis/site'
-alias hypngrkapp='cd ~ && ./ngrok http 3000 -region=us -hostname=ngrok-app.hypothesis.app -host-header=localhost -config=/Users/rglover/.ngrok2/hypothesis.yml'
-alias hypngrkjobs='cd ~ && ./ngrok http 4000 -region=us -hostname=ngrok-jobs.hypothesis.app -host-header=localhost -config=/Users/rglover/.ngrok2/hypothesis.yml'
+# CheatCode Aliases
+alias cc='cd ~/projects/cheatcode'
+alias cust='cd ~/projects/cheatcode/clients && cd'
+alias client='cd ~/projects/cheatcode/clients && cd'
 
-# Command Aliases (Deprecated)
-alias cmd='hyp'
-alias jobs='hypjobs'
-alias marketing='hypsite'
-alias cmdappngrk='hypngrkapp'
-alias cmdjobsngrk='hypngrkjobs'
-
-# Youblicity Aliases
-alias yb='cd ~/projects/youblicity'
-source ~/Dotfiles/bash/youblicity_aliases
-
-# Clever Beagle Aliases
-alias cb='cd ~/projects/cleverbeagle'
-alias cbwa='cd ~/projects/cleverbeagle/webapp'
-alias cbs='cd ~/projects/cleverbeagle/site'
-alias pup='cd ~/projects/cleverbeagle/pup'
-alias fur='cd ~/projects/cleverbeagle/fur'
-alias cbp='cd ~/projects/cleverbeagle/packages'
-alias mwds='meteor --settings settings-demo.json'
-alias clonepup='git clone git@cleverbeagle:cleverbeagle/pup.git --origin upstream'
-alias cust='cd ~/projects/cleverbeagle/customers && cd'
-alias ups='up && up url'
-alias upd='up deploy production'
-alias upl='up logs -f'
-
-# The Meteor Chef Aliases
-alias tmc='cd ~/projects/themeteorchef'
-alias site='cd ~/projects/themeteorchef/themeteorchef.com'
-alias base='cd ~/projects/themeteorchef/base/app'
-alias tuts='cd ~/projects/themeteorchef/tutorials || cd /Volumes/projects/themeteorchef/themeteorchef.com || echo "Well dang, kid. Need to mount your NAS."'
-alias kit='cd ~/projects/themeteorchef/kitchen/app'
-alias clonebase='git clone git@meteorchef:themeteorchef/base.git'
-alias mws='export NODE_OPTIONS="--max-http-header-size=80000" && meteor --settings settings-development.json'
-alias mns='meteor npm start'
-alias mr='meteor reset'
-alias ngrk='cd ~ && ./ngrok http -region=us -hostname=rglover.cleverbeagle.com -host-header=localhost -config=/Users/rglover/.ngrok2/cleverbeagle.yml'
+# Tunnel Aliases
+alias ngrk='cd ~ && ./ngrok http --region=us --hostname=tunnel.cheatcode.co --host-header=rewrite'
 alias ng='cd ~ && ./ngrok http'
-
-source ~/Dotfiles/bash/hypothesis_aliases
-source ~/Dotfiles/bash/cleverbeagle_aliases
+alias tunnel='cd ~ && ./cf.sh'
 
 # CheatCode
-alias cc='cd ~/projects/cheatcode'
-
-# Youblicity
-
-alias ybastaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@142.93.164.172'
-alias ybjstaging='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@164.90.219.90'
-alias ybjproduction='ssh -i ~/.ssh/ryan.glover@cleverbeagle.com root@165.232.72.115'
 
 # Personal Project Aliases
 alias rg='cd ~/projects/ryanglover.net'
@@ -77,9 +32,8 @@ alias lip='cd ~/projects/lip'
 
 # Misc. Aliases
 alias proj='cd ~/projects'
-alias py='cd ~/projects/python'
-alias df='cd ~/dotfiles && code .'
-alias ydla='youtube-dl -f 140'
+alias df='cd ~/dotfiles && cursor .'
+alias yta='youtube-dl -f 140'
 
 # Python/Django Aliases
 alias 2='python'
@@ -91,7 +45,11 @@ alias mm='python manage.py makemigrations'
 alias migsql='python manage.py sqlmigrate'
 
 # OSX Aliases
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-alias hideDesktop='defaults write com.apple.finder CreateDesktop false && killall Finder'
-alias showDesktop='defaults write com.apple.finder CreateDesktop true && killall Finder'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+alias show_files='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+alias hide_desktop='defaults write com.apple.finder CreateDesktop false && killall Finder'
+alias show_desktop='defaults write com.apple.finder CreateDesktop true && killall Finder'
+alias ls_date='stat -l -t '%FT%T' *'
+
+# Local Aliases
+alias lnxssh='ssh -i ~/.ssh/me@ryanglover.net rglover@192.168.1.122'

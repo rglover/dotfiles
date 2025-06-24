@@ -1,42 +1,48 @@
-# Import $PATH
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Set initial path on startup
+cd ~/projects
+
+# Load custom configurations
 source ~/dotfiles/bash/path
-
-# Import Aliases
 source ~/dotfiles/bash/aliases
-
-# Import Prompt
 source ~/dotfiles/bash/prompt
 
+# Ruby configuration
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.4.0/bin:$PATH"
+
+# Node.js/Yarn configuration
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
+# Python configuration
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
+# OpenSSL configuration
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+# MacPorts configuration
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
-
-##
-# Your previous /Users/rglover/.bash_profile file was backed up as /Users/rglover/.bash_profile.macports-saved_2017-01-08_at_17:33:33
-##
-
-# MacPorts Installer addition on 2017-01-08_at_17:33:33: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Homebrew configuration
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# RBENV
-eval "$(rbenv init -)"
-export PATH="/Users/rglover/.rbenv/shims:$PATH"
-export PATH="./bin:~/elements/bin:$PATH";
+# Rust configuration
 
-complete -C /usr/local/bin/terraform terraform
+export PATH="/Users/rglover/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/rglover/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rglover/google-cloud-sdk/path.bash.inc' ]; then . '/Users/rglover/google-cloud-sdk/path.bash.inc'; fi
+# Added by Windsurf
+export PATH="/Users/rglover/.codeium/windsurf/bin:$PATH"
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/rglover/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/rglover/google-cloud-sdk/completion.bash.inc'; fi
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/rglover/.lmstudio/bin"
+. "$HOME/.cargo/env"
+
+eval "$(starship init bash)"

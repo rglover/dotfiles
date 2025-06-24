@@ -30,3 +30,12 @@ export PATH="$PATH:$HOME/node_modules/.bin"
 
 # Add Deno to PATH
 export PATH="$PATH:$HOME/.deno/bin"
+
+# Add Homebrew to PATH
+export PATH="$PATH:/opt/homebrew/bin"
+
+# Add Fleet to PATH
+export PATH="$PATH:/Users/rglover/jetbrains"
+
+# Add Rust to PATH
+export PATH="$PATH:$HOME/.cargo/bin"
